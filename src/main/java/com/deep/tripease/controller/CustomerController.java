@@ -11,9 +11,14 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-
     @PostMapping("/add")
     public Customer addCustomer(@RequestBody Customer customer){
         return customerService.addCustomer(customer);
     }
+
+    @GetMapping("/get/customer-id/{id}")
+    public Customer getCustomerById(@PathVariable(name = "id") int customerId)throws Exception{
+        return customerService.getCustomerById(customerId);
+    }
+
 }

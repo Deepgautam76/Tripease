@@ -22,6 +22,8 @@ public class Customer {
     private int customerId;
     private String name;
     private int age;
+
+    @Enumerated(value = EnumType.STRING)
     private Gender gender;
 
     @OneToMany(cascade = CascadeType.ALL)
