@@ -1,5 +1,7 @@
 package com.deep.tripease.controller;
 
+import com.deep.tripease.dto.request.CustomerRequest;
+import com.deep.tripease.dto.response.CustomerResponse;
 import com.deep.tripease.model.Customer;
 import com.deep.tripease.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +14,12 @@ public class CustomerController {
     private CustomerService customerService;
 
     @PostMapping("/add")
-    public Customer addCustomer(@RequestBody Customer customer){
-        return customerService.addCustomer(customer);
+    public CustomerResponse addCustomer(@RequestBody CustomerRequest customerRequest){
+        return customerService.addCustomer(customerRequest);
     }
 
     @GetMapping("/get/customer-id/{id}")
-    public Customer getCustomerById(@PathVariable(name = "id") int customerId)throws Exception{
+    public CustomerResponse getCustomerById(@PathVariable(name = "id") int customerId)throws Exception{
         return customerService.getCustomerById(customerId);
     }
 

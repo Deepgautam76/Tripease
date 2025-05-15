@@ -11,3 +11,8 @@ public class TripeaseApplication {
 	}
 
 }
+
+// Transformer ans dto all not completed
+// also use builder in transformer
+// if you use the builder firstly annotated that class as @Builder
+// syntax Customer.builder().(all attribute by . saprat).build()

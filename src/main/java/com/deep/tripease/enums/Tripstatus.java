@@ -1,4 +1,4 @@
-package com.deep.tripease.Enums;
+package com.deep.tripease.enums;
 
 public enum Tripstatus {
     COMPLETED,

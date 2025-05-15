@@ -1,12 +1,8 @@
 package com.deep.tripease.model;
 
-import com.deep.tripease.Enums.Gender;
-import com.deep.tripease.model.Booking;
+import com.deep.tripease.enums.Gender;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +12,14 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Builder
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int customerId;
     private String name;
     private int age;
+    private String emailId;
 
     @Enumerated(value = EnumType.STRING)
     private Gender gender;

@@ -1,8 +1,6 @@
 package com.deep.tripease.model;
 
-import com.deep.tripease.Enums.Gender;
-import com.deep.tripease.model.Booking;
-import com.deep.tripease.model.Cab;
+import com.deep.tripease.enums.Gender;
 import jakarta.persistence.*;
 import lombok.*;
 

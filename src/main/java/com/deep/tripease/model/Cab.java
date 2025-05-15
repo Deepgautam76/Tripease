@@ -15,6 +15,7 @@ import lombok.Setter;
 @Setter
 @Entity
 public class Cab {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cabId;
