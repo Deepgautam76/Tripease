@@ -1,17 +1,18 @@
-package com.deep.tripease.dto.response;
+package com.deep.tripease.dto.request;
 
+import com.deep.tripease.enums.Gender;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class CustomerResponse {
+@NoArgsConstructor
+@Data
+public class DriverRequest {
 
     private String name;
     private int age;
+    private Gender gender;
     private String emailId;
+
 }

@@ -5,13 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Builder
-public class CustomerResponse {
+public class CabResponse {
 
-    private String name;
-    private int age;
-    private String emailId;
+    private int cabId;
+    private String cabName;
+    private String cabModel;
+    private double parKmRate;
+    private boolean available;
+
 }
