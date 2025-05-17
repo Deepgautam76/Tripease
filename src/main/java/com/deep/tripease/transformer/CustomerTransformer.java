@@ -20,7 +20,14 @@ public class CustomerDtoTransformer {
         customerResponse.setName(customer.getName());
         customerResponse.setAge(customer.getAge());
         customerResponse.setEmailId(customer.getEmailId());
-        return customerResponse;
+
+        // This is the same task using Builder annotation
+        return CustomerResponse
+                .builder()
+                .name(customer.getName())
+                .age(customer.getAge())
+                .emailId(customer.getEmailId())
+                .build();
     }
 
 }
