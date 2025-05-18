@@ -4,7 +4,7 @@ import com.deep.tripease.dto.request.CustomerRequest;
 import com.deep.tripease.dto.response.CustomerResponse;
 import com.deep.tripease.model.Customer;
 
-public class CustomerDtoTransformer {
+public class CustomerTransformer {
 
     public static Customer CustomerRequestToCustomer(CustomerRequest customerRequest){
         Customer saveCustomer=new Customer();
