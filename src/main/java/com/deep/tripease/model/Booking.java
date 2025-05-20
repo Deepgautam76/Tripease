@@ -1,10 +1,7 @@
 package com.deep.tripease.model;
 
 import com.deep.tripease.enums.Tripstatus;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,6 +23,8 @@ public class Booking {
     private String pickup;
     private String destination;
     private double tripDistanceInKm;
+
+    @Enumerated(value = EnumType.STRING)
     private Tripstatus tripstatus;
     private double billAmount;
 

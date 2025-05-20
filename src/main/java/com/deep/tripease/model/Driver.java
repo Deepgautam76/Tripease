@@ -9,8 +9,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
+@Data
 @Entity
 @Builder
 public class Driver {
@@ -19,6 +18,8 @@ public class Driver {
     private int driverId;
     private String name;
     private int age;
+
+    @Enumerated(value = EnumType.STRING)
     private Gender gender;
 
     @Column(unique = true,nullable = false)

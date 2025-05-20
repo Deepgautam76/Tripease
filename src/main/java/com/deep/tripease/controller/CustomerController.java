@@ -53,4 +53,11 @@ public class CustomerController {
         return customerService.getCustomerByGenderAndGraterThanAge(gender,age);
     }
 
+    //Update the Customer profile
+    @PutMapping("/update")
+    public ResponseEntity<String> updateUseProfile(@RequestBody CustomerRequest customerRequest){
+       return customerService.updateCustomerProfile(customerRequest);
+    }
+
+
 }

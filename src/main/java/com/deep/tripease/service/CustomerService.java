@@ -91,4 +91,19 @@ public class CustomerService {
         return new ResponseEntity<>(customerResponseList,HttpStatus.OK);
 
     }
+
+    public ResponseEntity<String> updateCustomerProfile(CustomerRequest customerRequest) {
+        Optional<Customer> optionalCustomer=customerRepository.findByEmailId(customerRequest.getEmailId());
+        if(optionalCustomer.isEmpty()){
+            throw new CustomerNotFoundException("This is invalid User");
+        }
+        //Update the existed customer
+        Customer customer=optionalCustomer.get();
+        customer.setName(customerRequest.getName());
+        customer.setAge(customerRequest.getAge());
+        customer.setGender(customerRequest.getGender());
+        customer.setEmailId(customerRequest.getEmailId());
+        customerRepository.save(customer);
+        return new ResponseEntity<>("Updated customer successfully",HttpStatus.OK);
+    }
 }

@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer,Integer> {
@@ -25,4 +26,5 @@ public interface CustomerRepository extends JpaRepository<Customer,Integer> {
     List<Customer> getCustomerByGenderAndGraterThanAge(@Param("gender") String gender,
                                                        @Param("age") int age);
 
+    Optional<Customer> findByEmailId(String emailId);
 }
