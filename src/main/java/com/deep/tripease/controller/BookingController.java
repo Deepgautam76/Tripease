@@ -18,7 +18,7 @@ public class BookingController {
 
 
     @GetMapping("/get")
-    public ResponseEntity<List<BookingResponse>> getAllBookings(){
+    public ResponseEntity<?> getAllBookings(){
         return bookingService.getAllBookings();
     }
 

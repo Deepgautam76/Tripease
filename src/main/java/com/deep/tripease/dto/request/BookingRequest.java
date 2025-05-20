@@ -13,6 +13,4 @@ public class BookingRequest {
     private String pickup;
     private String destination;
     private double tripDistanceInKm;
-    private Tripstatus tripstatus;
-    private double billAmount;
 }

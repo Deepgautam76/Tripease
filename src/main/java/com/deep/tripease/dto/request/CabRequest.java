@@ -12,5 +12,4 @@ public class CabRequest {
     private String cabName;
     private String cabModel;
     private double parKmRate;
-    private boolean available;
 }

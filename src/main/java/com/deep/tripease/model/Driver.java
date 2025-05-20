@@ -12,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Builder
 public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +20,8 @@ public class Driver {
     private String name;
     private int age;
     private Gender gender;
+
+    @Column(unique = true,nullable = false)
     private String emailId;
 
     @OneToMany(cascade = CascadeType.ALL)

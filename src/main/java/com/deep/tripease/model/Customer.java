@@ -19,7 +19,10 @@ public class Customer {
     private int customerId;
     private String name;
     private int age;
+
+    @Column(unique = true,nullable = false)
     private String emailId;
+
 
     @Enumerated(value = EnumType.STRING)
     private Gender gender;

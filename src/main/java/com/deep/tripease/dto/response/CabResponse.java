@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CabResponse {
 
-    private int cabId;
     private String cabName;
     private String cabModel;
     private double parKmRate;
     private boolean available;
+    private DriverResponse driver;
 
 }

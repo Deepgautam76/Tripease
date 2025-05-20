@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -17,5 +19,10 @@ public class BookingResponse {
     private double tripDistanceInKm;
     private Tripstatus tripstatus;
     private double billAmount;
+    private Date bookedAt;
+    private Date lastUpDateAt;
+
+    private CustomerResponse customer;
+    private CabResponse cab;
 
 }
