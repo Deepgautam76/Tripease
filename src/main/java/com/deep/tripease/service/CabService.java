@@ -74,7 +74,7 @@ public class CabService {
         Cab cab=optionalCab.get();
         cab.setAvailable(!cab.isAvailable());
         cabRepository.save(cab);
-        return new ResponseEntity<>("Cab updated successfully of id "+cabId,HttpStatus.ACCEPTED);
+        return new ResponseEntity<>("Cab updated successfully,Now you book next ride ",HttpStatus.ACCEPTED);
     }
 
 }

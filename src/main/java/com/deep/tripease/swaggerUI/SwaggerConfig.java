@@ -17,8 +17,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenApi(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("This is the trip ease app")
-                        .description("all the api endpoint of trip ease")
+                        .title("Trip Booking Backend Systems API")
+                        .description("All api endpoint of trip ease")
                         .version("V.1.0"));
     }
 
